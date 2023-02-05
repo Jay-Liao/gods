@@ -1,28 +1,28 @@
 package set
 
-type IntSet struct {
+type Set struct {
 	container map[int]struct{}
 }
 
-func NewIntSet() IntSet {
-	return IntSet{
+func NewSet() Set {
+	return Set{
 		container: make(map[int]struct{}),
 	}
 }
 
-func (set IntSet) Add(x int) {
+func (set Set) Add(x int) {
 	set.container[x] = struct{}{}
 }
 
-func (set IntSet) Remove(x int) {
+func (set Set) Remove(x int) {
 	delete(set.container, x)
 }
 
-func (set IntSet) Len() int {
+func (set Set) Len() int {
 	return len(set.container)
 }
 
-func (set IntSet) Contains(x int) bool {
+func (set Set) Contains(x int) bool {
 	_, found := set.container[x]
 	return found
 }

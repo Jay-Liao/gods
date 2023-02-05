@@ -6,21 +6,21 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-func TestIntMinHeap(t *testing.T) {
-	h := NewIntMinHeap()
+func TestMinHeap(t *testing.T) {
+	h := NewMinHeap()
 	assert.Equal(t, 0, h.Len())
 }
 
-func TestIntMinHeap_PushVal(t *testing.T) {
-	h := NewIntMinHeap()
+func TestMinHeap_PushVal(t *testing.T) {
+	h := NewMinHeap()
 	h.PushVal(1)
 	assert.Equal(t, 1, h.Len())
 	h.PushVal(0)
 	assert.Equal(t, 2, h.Len())
 }
 
-func TestIntMinHeap_PopMin(t *testing.T) {
-	h := NewIntMinHeap()
+func TestMinHeap_PopMin(t *testing.T) {
+	h := NewMinHeap()
 	h.PushVal(1)
 	assert.Equal(t, 1, h.Len())
 	h.PushVal(0)
